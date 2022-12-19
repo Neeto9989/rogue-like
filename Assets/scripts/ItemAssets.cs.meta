@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b2dd60d9b14eeb549a08ca67bf5cd101
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - healthPotionSprite: {fileID: 21300000, guid: 48b7b51edd2bc844e9bffe9fc2472f8f, type: 3}
+  - speedPotionSprite: {fileID: 21300000, guid: 792c84dda0cdcfb42a0511ebc04df676, type: 3}
+  - bombSprite: {fileID: 21300000, guid: cfc36b9818854984c84ef974d45a1104, type: 3}
+  - healthRingSprite: {fileID: 21300000, guid: 62b90fc5d8e848e49a54f2ee7cee721e, type: 3}
+  - speedNecklaceSprite: {fileID: 21300000, guid: 41ae04584f48c414bbd8a7968e60fae9, type: 3}
+  - heavySwordSprite: {fileID: 21300000, guid: 0ee45377c612744469b46287119eed66, type: 3}
+  - fastSwordSprite: {fileID: 21300000, guid: 1983d732c19272a4f87629376c626725, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
