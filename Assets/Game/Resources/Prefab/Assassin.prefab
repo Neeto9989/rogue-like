@@ -126,7 +126,7 @@ MonoBehaviour:
   closestEnemy: {fileID: 0}
   closestEnemy2: {fileID: 0}
   enemyContact: 0
-  damage: 200
+  damage: 40
   playerTest: {fileID: 0}
   fightManager: {fileID: 0}
   audioManager: {fileID: 0}
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25976522a034cd6409383fa219846e01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 200
+  maxHealth: 150
   currentHealth: 0
   death: {fileID: 8055792276276895792}
   healthBar: {fileID: 8055792276304549712}
