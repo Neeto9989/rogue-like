@@ -9,9 +9,11 @@ public class Inventory : MonoBehaviour
     private List<Item> itemList;
     private Inventory inventory;
     public bool invFull = false;
+    private Action<Item> useItemAction;
 
-    public Inventory()
+    public Inventory(Action<Item> useItemAction)
     {
+        this.useItemAction = useItemAction;
         itemList = new List<Item>();
         Debug.Log(itemList.Count);
     }
@@ -23,6 +25,17 @@ public class Inventory : MonoBehaviour
             itemList.Add(item);
             OnItemListChanged?.Invoke(this, EventArgs.Empty);
         }
+    }
+
+    public void UseItem(Item item)
+    {
+        useItemAction(item);
+    }
+
+    public void RemoveItem(Item item)
+    {
+        itemList.Remove(item);
+        OnItemListChanged?.Invoke(this, EventArgs.Empty);
     }
 
     public List<Item> GetItemList()

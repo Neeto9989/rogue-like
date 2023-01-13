@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartFights : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class StartFights : MonoBehaviour
     public GameObject startFightUI;
     public GameObject fightWonUI;
     public GameObject fightLostUI;
+    public GameObject gameWonUI;
 
     public static StartFights instance;
 
@@ -35,5 +37,9 @@ public class StartFights : MonoBehaviour
         fightLost = true;
         fightLostUI.SetActive(true);
     }
-
+    public void GameWon()
+    {
+        fightWon = true;
+        SceneManager.LoadScene("Cutscene2");
+    }
 }

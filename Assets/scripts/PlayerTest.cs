@@ -19,10 +19,7 @@ public class PlayerTest : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(20);
-        }
+
     }
     public void TakeDamage(int damage)
     {
@@ -34,5 +31,21 @@ public class PlayerTest : MonoBehaviour
 
         }
     }
-
+    public void HealHealth(int heal)
+    {
+        currentHealth += heal;
+        if(currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+        healthBar.SetHealth(currentHealth);
+        
+    }
+    public void IncreaseMaxHP(int maxHP)
+    {
+        maxHealth = maxHealth + maxHP;
+        currentHealth = currentHealth + maxHP;
+        healthBar.SetMaxHealth(maxHealth);
+        healthBar.SetHealth(currentHealth);
+    }
 }

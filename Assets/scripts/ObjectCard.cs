@@ -11,6 +11,12 @@ public class ObjectCard : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
     private GameObject objectDragInstance;
     private GameManager gameManager;
 
+    private GameObject[] containers;
+    private GameObject container1;
+    private GameObject container2;
+    private GameObject container3;
+    private GameObject container4;
+
     private void Start()
     {
         gameManager = GameManager.instance;
@@ -20,7 +26,9 @@ public class ObjectCard : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
     
     public void OnDrag(PointerEventData eventData)
     {
+
         objectDragInstance.transform.position = Input.mousePosition;
+
     }
     public void OnPointerDown(PointerEventData eventData)
     {

@@ -9,9 +9,11 @@ public class ObjectContainer : MonoBehaviour
     public GameManager gameManager;
     public Image backgroundImage;
 
+
     private void Start()
     {
         gameManager = GameManager.instance;
+        backgroundImage.enabled = false;
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -25,7 +27,16 @@ public class ObjectContainer : MonoBehaviour
     public void OnTriggerExit2D(Collider2D collision)
     {
         gameManager.currentContainer = null;
-        backgroundImage.enabled = false;
+        if (isFull == true)
+        {
+            Destroy(backgroundImage);
+
+        }
+        if (isFull != true)
+        {
+            backgroundImage.enabled = false;
+        }
+
     }
 
 }
